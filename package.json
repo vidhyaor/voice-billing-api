@@ -10,6 +10,7 @@
     "start": "APP_ENV=local NODE_ENV=production node dist/server.js",
     "start:development": "APP_ENV=development NODE_ENV=production node dist/server.js",
     "start:production": "APP_ENV=production NODE_ENV=production node dist/server.js",
+    "postinstall": "prisma generate",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "node scripts/with-env.cjs prisma migrate dev",
     "prisma:migrate:development": "APP_ENV=development node scripts/with-env.cjs prisma migrate dev",
