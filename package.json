@@ -7,6 +7,7 @@
     "dev": "APP_ENV=local tsx watch src/server.ts",
     "dev:development": "APP_ENV=development tsx watch src/server.ts",
     "build": "tsc",
+    "build:render": "NPM_CONFIG_PRODUCTION=false npm install && npx prisma generate && npm run build",
     "start": "APP_ENV=local NODE_ENV=production node dist/server.js",
     "start:development": "APP_ENV=development NODE_ENV=production node dist/server.js",
     "start:production": "APP_ENV=production NODE_ENV=production node dist/server.js",
