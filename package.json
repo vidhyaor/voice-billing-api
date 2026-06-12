@@ -18,6 +18,10 @@
     "prisma:migrate:production": "APP_ENV=production node scripts/with-env.cjs prisma migrate deploy",
     "prisma:studio": "node scripts/with-env.cjs prisma studio",
     "prisma:studio:development": "APP_ENV=development node scripts/with-env.cjs prisma studio",
+    "db:seed": "node scripts/with-env.cjs tsx prisma/seed.ts",
+    "db:seed:local": "APP_ENV=local node scripts/with-env.cjs tsx prisma/seed.ts",
+    "db:seed:development": "APP_ENV=development node scripts/with-env.cjs tsx prisma/seed.ts",
+    "db:seed:production": "APP_ENV=production node scripts/with-env.cjs tsx prisma/seed.ts",
     "lint": "tsc --noEmit",
     "test": "APP_ENV=local tsx --test src/**/*.test.ts"
   },
@@ -33,6 +37,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@fastify/cors": "^10.0.2",
