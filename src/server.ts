@@ -10,7 +10,8 @@ async function start(): Promise<void> {
       {
         host: env.HOST,
         port: env.PORT,
-        env: env.NODE_ENV,
+        appEnv: env.APP_ENV,
+        nodeEnv: env.NODE_ENV,
         api: `/api/v1`,
       },
       `${env.APP_NAME} listening`,
